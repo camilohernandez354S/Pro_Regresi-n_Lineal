@@ -1,0 +1,109 @@
+/* static/styles.css */
+
+/* Reset mínimo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general y tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Tarjetas de estadísticas */
+.card.stat-card {
+  background-color: #1f1f1f;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+}
+
+/* Encabezados dentro de tarjetas */
+.card.stat-card h5 {
+  font-size: 1rem;
+  color: #bbb;
+}
+.card.stat-card h1, .card.stat-card h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Lista de distribución */
+.list-group .list-group-item {
+  background-color: #1f1f1f;
+  color: #ddd;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+}
+.list-group .list-group-item + .list-group-item {
+  border-top: 1px solid #333;
+}
+
+/* Cards de tendencia */
+.card.bg-secondary {
+  background-color: #1f1f1f !important;
+  border: none;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.card.bg-secondary h5, .card.bg-secondary p {
+  color: #ccc;
+}
+
+/* Botón enlace al gráfico */
+a.btn-outline-light {
+  border-color: #eee;
+  color: #eee;
+  transition: background-color 0.2s, color 0.2s;
+}
+a.btn-outline-light:hover {
+  background-color: #eee;
+  color: #121212;
+}
+
+/* Tabla responsiva */
+.table-responsive {
+  background-color: #1f1f1f;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.table {
+  color: #ddd;
+}
+.table thead th {
+  color: #fff;
+  border-bottom: 2px solid #333;
+}
+.table tbody tr {
+  border-bottom: 1px solid #333;
+}
+.table tbody tr:hover {
+  background-color: #2a2a2a;
+}
+
+/* Contenedor del gráfico */
+img.img-fluid {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .card.stat-card h1, .card.stat-card h3 {
+    font-size: 1.5rem;
+  }
+  .card.stat-card h5 {
+    font-size: 0.9rem;
+  }
+}
