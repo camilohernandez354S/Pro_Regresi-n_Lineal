@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard de Viviendas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
@@ -14,24 +15,25 @@
   <div class="container py-4">
     <!-- Resumen general -->
     <div class="row g-4 mb-4">
-      <div class="col-md-6">
-        <div class="card p-3 bg-secondary h-100">
+      <!-- Tarjeta total de viviendas -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3 bg-secondary h-100 border-0">
           <h5>Total de viviendas</h5>
           <h1>{{ total_viviendas }}</h1>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card p-3 bg-secondary h-100">
+
+      <!-- Tarjeta precio promedio por m² -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3 bg-secondary h-100 border-0">
           <h5>Precio promedio por m²</h5>
           <h1>€{{ precio_m2_promedio }}</h1>
         </div>
       </div>
-    </div>
 
-    <!-- Distribución por tipo -->
-    <div class="row mb-4">
-      <div class="col-md-6">
-        <div class="card bg-secondary p-3">
+      <!-- Tarjeta de distribución por tipo -->
+      <div class="col-md-12 col-lg-4">
+        <div class="card p-3 bg-secondary h-100 border-0">
           <h5>Distribución por tipo de vivienda</h5>
           <ul class="list-group list-group-flush mt-3">
             <li class="list-group-item bg-secondary text-white">Casa: {{ casas_count }}</li>
@@ -40,23 +42,24 @@
           </ul>
         </div>
       </div>
-
-      <!-- Rango de precios y área común -->
-      <div class="col-md-6">
-        <div class="card bg-secondary p-3">
-          <h5>Tendencias</h5>
-          <p class="mb-1">Precio mínimo: €{{ precio_min }}</p>
-          <p class="mb-1">Precio máximo: €{{ precio_max }}</p>
-          <p class="mb-0">Área más común: {{ area_comun }} m²</p>
-        </div>
-      </div>
     </div>
 
-    <!-- Enlace al gráfico -->
-    <div class="row">
-      <div class="col text-center">
-        <a href="/grafico" class="btn btn-outline-light">
-          <i class="bi bi-graph-up me-1"></i>Ver Diagrama de Regresión
+    <!-- Rango de precios y área común -->
+    <div class="row g-4 mb-4">
+      <div class="col-md-6">
+        <div class="card bg-secondary p-3 border-0">
+          <h5>Tendencias</h5>
+          <p></p>
+          <p>Precio mínimo: €{{ precio_min }}</p>
+          <p>Precio máximo: €{{ precio_max }}</p>
+          <p>Área más común: {{ area_comun }} m²</p>
+        </div>
+      </div>
+
+      <!-- Enlace al gráfico -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <a href="/grafico" class="btn btn-outline-light btn-lg">
+          <i class="bi bi-graph-up me-1"></i> Ver Diagrama de Regresión
         </a>
       </div>
     </div>

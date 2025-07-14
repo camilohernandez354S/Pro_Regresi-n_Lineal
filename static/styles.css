@@ -11,7 +11,11 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
-  color: #eee;
+  color: #f0f0f0;
+}
+
+h1, h5, p {
+  color : #ffffff;
 }
 
 /* Tarjetas de estadísticas */
@@ -28,19 +32,19 @@ body {
 }
 
 /* Encabezados dentro de tarjetas */
-.card.stat-card h5 {
+.card.stat-card {
   font-size: 1rem;
-  color: #bbb;
+  color: #ff0000;
 }
 .card.stat-card h1, .card.stat-card h3 {
   font-size: 2rem;
-  color: #fff;
+  color: #ef0707;
 }
 
 /* Lista de distribución */
 .list-group .list-group-item {
   background-color: #1f1f1f;
-  color: #ddd;
+  color: #dddddd;
   border: none;
   padding: 0.75rem 1.25rem;
   font-size: 0.95rem;
@@ -58,7 +62,7 @@ body {
   padding: 1rem;
 }
 .card.bg-secondary h5, .card.bg-secondary p {
-  color: #ccc;
+  color: #ffffff;
 }
 
 /* Botón enlace al gráfico */
@@ -70,6 +74,8 @@ a.btn-outline-light {
 a.btn-outline-light:hover {
   background-color: #eee;
   color: #121212;
+  transition: background-color 0.2s, color 0.2s, border-radius 0.2s;
+  border-radius: 0.5rem;
 }
 
 /* Tabla responsiva */
@@ -83,19 +89,19 @@ a.btn-outline-light:hover {
 }
 .table thead th {
   color: #fff;
-  border-bottom: 2px solid #333;
+  border-bottom: 1px solid #444;
 }
 .table tbody tr {
   border-bottom: 1px solid #333;
 }
 .table tbody tr:hover {
-  background-color: #2a2a2a;
+  background-color: #333;
 }
 
 /* Contenedor del gráfico */
 img.img-fluid {
   border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* Ajustes responsive */
@@ -105,5 +111,8 @@ img.img-fluid {
   }
   .card.stat-card h5 {
     font-size: 0.9rem;
+  }
+  .table-responsive {
+    padding: 0.5rem;
   }
 }
